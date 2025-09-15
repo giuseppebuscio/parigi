@@ -14,6 +14,12 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
   const navigate = useNavigate();
 
+  // Lista delle attrazioni con biglietti disponibili
+  const attractionsWithTickets = ['museo-dorsay', 'saint-chapelle', 'reggia-versailles', 'museo-louvre'];
+  
+  // Attrazioni con biglietti acquistati
+  const attractionsPurchased = ['battello-senna'];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Cover Image */}
@@ -39,7 +45,7 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
         <div className="max-w-md mx-auto">
           {/* Attractions Section Header */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-light text-gray-900 mb-3">
+            <h2 className="text-xl font-medium text-gray-900 mb-4 text-center">
               Attrazioni
             </h2>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -56,9 +62,25 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
               className="w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg font-medium text-gray-900 text-left">
-                  {attraction.name}
-                </span>
+                <div className="text-left">
+                  <div className="text-lg font-medium text-gray-900">
+                    {attraction.name}
+                  </div>
+                  <div className={`text-xs mt-0.5 ${
+                    attractionsWithTickets.includes(attraction.id) 
+                      ? 'text-green-600 font-medium' 
+                      : attractionsPurchased.includes(attraction.id)
+                      ? 'text-gray-500'
+                      : 'text-gray-500'
+                  }`}>
+                    {attractionsWithTickets.includes(attraction.id) 
+                      ? 'Biglietti disponibili' 
+                      : attractionsPurchased.includes(attraction.id)
+                      ? 'In arrivo il 15 ott'
+                      : 'Biglietti non disponibili'
+                    }
+                  </div>
+                </div>
                 <svg 
                   className="w-5 h-5 text-gray-400" 
                   fill="none" 
