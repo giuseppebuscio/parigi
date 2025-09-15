@@ -99,6 +99,47 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
           ))}
         </div>
 
+        {/* Itinerario Section */}
+        <div className="mt-12">
+          <div className="text-center mb-6">
+            <h2 className="text-xl font-medium text-gray-900 mb-4 text-center">
+              Itinerario
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Visualizza il programma dettagliato del viaggio
+            </p>
+          </div>
+          
+          <button
+            onClick={() => navigate('/itinerario')}
+            className="w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
+          >
+            <div className="flex items-center justify-between">
+              <div className="text-left">
+                <div className="text-lg font-medium text-gray-900">
+                  Programma del viaggio
+                </div>
+                <div className="text-xs mt-0.5 text-gray-500">
+                  Visualizza l'itinerario completo
+                </div>
+              </div>
+              <svg 
+                className="w-5 h-5 text-gray-400" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M9 5l7 7-7 7" 
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AttractionPage from './pages/AttractionPage';
+import ItinerarioPage from './pages/ItinerarioPage';
 
 // Componente per tornare in cima alla pagina ad ogni cambio di route
 const ScrollToTop = () => {
@@ -59,6 +60,7 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<HomePage attractions={attractions} />} />
+          <Route path="/itinerario" element={<ItinerarioPage />} />
           {attractions.map(attraction => (
             <Route 
               key={attraction.id} 
