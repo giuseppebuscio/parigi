@@ -57,27 +57,54 @@ const ItinerarioPage: React.FC = () => {
             {/* 18 ottobre */}
             <div className="bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100">
               <div className="text-lg font-medium text-gray-900 mb-3">
-                18 ottobre - Pomeriggio
+                18 ottobre
               </div>
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex items-start">
-                  <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Arco di Trionfo</strong> (30 min mezzi da casa)</span>
+              <div className="space-y-3 text-sm text-gray-600">
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-medium text-gray-800 mb-2">✈️ Arrivo in aeroporto</div>
+                  <div>• Orly 11:30 - Caterina e Saverio</div>
+                  <div>• Orly 13:00 - Cristina e Peppe</div>
                 </div>
-                <div className="flex items-start">
-                  <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Galleria Lafayette Champs Elysees</strong> (13 min a piedi) - strada piena di negozi + macarons Pierre Hermès</span>
+                
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-medium text-gray-800 mb-2">🏠 Casa</div>
+                  <div>45 rue du Docteur Babinski, 18° arrondissement, 75018 Parigi</div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Metro 14 viola → Saint-Lazare + Metro 13 azzurra → Porte de Saint-Ouen (52 min)
+                  </div>
                 </div>
-                <div className="flex items-start">
-                  <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Piazza Trocadero</strong> (12 min mezzi) - vista Torre Eiffel (no foto con topolino! 😂)</span>
+
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <div className="font-medium text-gray-800 mb-2">🍽️ Pranzo vicino casa</div>
+                  <div className="space-y-1">
+                    <a href="https://maps.app.goo.gl/kjeSjCQBZpqwFfug9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 1</a>
+                    <a href="https://maps.app.goo.gl/iQZuUfFvoTGebeYm7" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 2</a>
+                    <a href="https://maps.app.goo.gl/ipduTpggzvz89ckq8" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 3</a>
+                  </div>
                 </div>
-                <div className="flex items-start">
-                  <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Giro battello + Torre Eiffel illuminata</strong> - 17€ a testa, prenotazione fatta</span>
-                </div>
-                <div className="text-xs text-gray-500 mt-2">
-                  Torre si illumina la sera, sbrilluccica ogni ora dalle 22
+
+                <div className="font-medium text-gray-800 mb-2">Pomeriggio:</div>
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <span className="font-medium text-gray-800 mr-2">•</span>
+                    <span><strong>Arco di Trionfo</strong> (30 min mezzi da casa)</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-medium text-gray-800 mr-2">•</span>
+                    <span><strong>Galleria Lafayette Champs Elysees</strong> (13 min a piedi) - strada piena di negozi + macarons Pierre Hermès</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-medium text-gray-800 mr-2">•</span>
+                    <span><strong>Piazza Trocadero</strong> (12 min mezzi) - vista Torre Eiffel (no foto con topolino! 😂)</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="font-medium text-gray-800 mr-2">•</span>
+                    <span><strong>Giro battello + Torre Eiffel illuminata</strong></span>
+                  </div>
+                  <div className="text-xs text-gray-500 ml-4">
+                    Partenze: 19:00, 20:00, 20:30, 21:00, 21:30, 22:00<br/>
+                    Torre sbrilluccica dalle 22 ogni ora
+                  </div>
                 </div>
               </div>
             </div>
@@ -90,11 +117,11 @@ const ItinerarioPage: React.FC = () => {
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Versailles</strong> (1h 17min da casa) - 21-32€</span>
+                  <span><strong>Reggia di Versailles</strong> (1h 17min da casa) - ore 10:00 (andare un po' prima)</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Museo D'Orsay</strong> - pranzo possibile nel museo (cibo e prezzi buoni)</span>
+                  <span><strong>Museo D'Orsay</strong> (48 min mezzi) - ore 16:00</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
@@ -138,10 +165,6 @@ const ItinerarioPage: React.FC = () => {
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Opera Garnier</strong> - chiude alle 17, ultimo ingresso alle 15</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="font-medium text-gray-800 mr-2">•</span>
                   <span><strong>Place de la Concorde</strong> (10 min a piedi)</span>
                 </div>
                 <div className="flex items-start">
@@ -163,7 +186,11 @@ const ItinerarioPage: React.FC = () => {
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Palazzo degli artisti</strong> (se volete)</span>
+                  <span><strong>Opera Garnier</strong> (27 min metro) - chiude alle 17, ultimo ingresso alle 15</span>
+                </div>
+                <div className="flex items-start">
+                  <span className="font-medium text-gray-800 mr-2">•</span>
+                  <span><strong>Palazzo degli artisti</strong> (11 min mezzi) - offerta libera</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
