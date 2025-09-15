@@ -15,10 +15,10 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
   const navigate = useNavigate();
 
   // Lista delle attrazioni con biglietti disponibili
-  const attractionsWithTickets = ['museo-dorsay', 'saint-chapelle', 'reggia-versailles', 'museo-louvre'];
+  const attractionsWithTickets = ['museo-dorsay', 'saint-chapelle', 'reggia-versailles', 'museo-louvre', 'battello-senna'];
   
   // Attrazioni con biglietti acquistati
-  const attractionsPurchased = ['battello-senna'];
+  const attractionsPurchased: string[] = [];
 
   return (
     <div className="min-h-screen bg-gray-50">

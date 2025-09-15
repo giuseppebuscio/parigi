@@ -72,7 +72,12 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
     'battello-senna': {
       description: 'Crociera panoramica sulla Senna',
       image: '/images/battello-senna.jpg',
-      tickets: [],
+      tickets: [
+        { name: 'Saverio Buscio', price: '', pdf: '/biglietti/battello-senna/saverio-buscio.pdf' },
+        { name: 'Caterina Alaimo', price: '', pdf: '/biglietti/battello-senna/caterina-alaimo.pdf' },
+        { name: 'Cristina Fiorenza', price: '', pdf: '/biglietti/battello-senna/cristina-fiorenza.pdf' },
+        { name: 'Giuseppe Scopelliti', price: '', pdf: '/biglietti/battello-senna/giuseppe-scopelliti.pdf' }
+      ],
       receipts: [
         { name: 'Ricevuta Acquisto', pdf: '/ricevute/battello-senna/ricevuta-acquisto.pdf' }
       ],
@@ -206,14 +211,6 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
                 </p>
               </div>
             )}
-            {/* Nota speciale per Battello Senna */}
-            {attraction.id === 'battello-senna' && (
-              <div className="mt-3 text-center">
-                <p className="text-xs text-gray-500">
-                  I biglietti saranno disponibili dal 15 ottobre
-                </p>
-              </div>
-            )}
           </div>
         )}
 
@@ -262,6 +259,100 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
             Altre informazioni
           </h2>
           <div className="space-y-3">
+            {/* Pulsanti speciali per Battello Senna */}
+            {attraction.id === 'battello-senna' && (
+              <>
+                <a
+                  href="https://maps.app.goo.gl/uFePDn46hjdWBFGp8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-lg font-medium text-gray-900">
+                        Luogo di incontro
+                      </div>
+                      <div className="text-xs text-gray-500 mt-0.5">
+                        Port de la Bourdonnais, 75007 Paris, France
+                      </div>
+                    </div>
+                    <svg 
+                      className="w-5 h-5 text-gray-400" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
+                      />
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
+                      />
+                    </svg>
+                  </div>
+                </a>
+                
+                <a
+                  href="/biglietti/battello-senna/orari.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-medium text-gray-900">
+                      Orari
+                    </div>
+                    <svg 
+                      className="w-5 h-5 text-gray-400" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                      />
+                    </svg>
+                  </div>
+                </a>
+                
+                <a
+                  href="/biglietti/battello-senna/info.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-medium text-gray-900">
+                      Informazioni
+                    </div>
+                    <svg 
+                      className="w-5 h-5 text-gray-400" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </>
+            )}
+            
             <a
               href={data.website}
               target="_blank"
@@ -287,46 +378,6 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
                 </svg>
               </div>
             </a>
-            
-            {/* Pulsante Luogo di Incontro per Battello Senna */}
-            {attraction.id === 'battello-senna' && (
-              <a
-                href="https://maps.app.goo.gl/uFePDn46hjdWBFGp8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-white rounded-2xl px-6 py-4 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition-all duration-200 active:scale-95"
-              >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-lg font-medium text-gray-900">
-                      Luogo di incontro
-                    </div>
-                    <div className="text-xs text-gray-500 mt-0.5">
-                      Port de la Bourdonnais, 75007 Paris, France
-                    </div>
-                  </div>
-                  <svg 
-                    className="w-5 h-5 text-gray-400" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
-                    />
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
-                    />
-                  </svg>
-                </div>
-              </a>
-            )}
           </div>
         </div>
       </div>
