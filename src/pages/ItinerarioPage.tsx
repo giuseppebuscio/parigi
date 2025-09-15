@@ -75,12 +75,7 @@ const ItinerarioPage: React.FC = () => {
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-3">
-                  <div className="font-medium text-gray-800 mb-2">🍽️ Pranzo vicino casa</div>
-                  <div className="space-y-1">
-                    <a href="https://maps.app.goo.gl/kjeSjCQBZpqwFfug9" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 1</a>
-                    <a href="https://maps.app.goo.gl/iQZuUfFvoTGebeYm7" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 2</a>
-                    <a href="https://maps.app.goo.gl/ipduTpggzvz89ckq8" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ristorante 3</a>
-                  </div>
+                  <div className="font-medium text-gray-800">🍽️ Pranzo vicino casa</div>
                 </div>
 
                 <div className="font-medium text-gray-800 mb-2">Pomeriggio:</div>
@@ -125,7 +120,7 @@ const ItinerarioPage: React.FC = () => {
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Galleria Lafayette Haussmann</strong> (3 min a piedi)</span>
+                  <span><strong>Galleria Lafayette Haussmann</strong> (22 min mezzi)</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
