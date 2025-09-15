@@ -15,15 +15,37 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-8">
-      <div className="max-w-md mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-light text-gray-900 mb-2 tracking-tight">
+    <div className="min-h-screen bg-gray-50">
+      {/* Cover Image */}
+      <div className="relative w-full h-64 mb-8">
+        <img 
+          src="/images/parigi.jpg" 
+          alt="Parigi"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute bottom-6 left-0 right-0 text-center px-4">
+          <h1 className="text-4xl font-light text-white mb-2 tracking-tight">
             Viaggio a Parigi
           </h1>
-          <div className="w-16 h-0.5 bg-gray-300 mx-auto"></div>
+          <div className="w-16 h-0.5 bg-white/60 mx-auto mb-3"></div>
+          <p className="text-sm text-white/90">
+            Scopri le meraviglie di Parigi
+          </p>
         </div>
+      </div>
+
+      <div className="px-4 pb-8">
+        <div className="max-w-md mx-auto">
+          {/* Attractions Section Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-light text-gray-900 mb-3">
+              Attrazioni
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Seleziona un'attrazione per vedere i biglietti, le ricevute e altre informazioni
+            </p>
+          </div>
 
         {/* Attractions Grid */}
         <div className="space-y-3">
@@ -55,11 +77,6 @@ const HomePage: React.FC<HomePageProps> = ({ attractions }) => {
           ))}
         </div>
 
-        {/* Footer */}
-        <div className="mt-16 text-center">
-          <p className="text-sm text-gray-500">
-            Scopri le meraviglie di Parigi
-          </p>
         </div>
       </div>
     </div>
