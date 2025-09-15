@@ -160,11 +160,11 @@ const ItinerarioPage: React.FC = () => {
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Place de la Concorde</strong> (10 min a piedi)</span>
+                  <span><strong>Place de la Concorde</strong> (opzionale)</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
-                  <span><strong>Pont Alexandre III</strong> (9 min a piedi)</span>
+                  <span><strong>Pont Alexandre III</strong> (opzionale)</span>
                 </div>
                 <div className="flex items-start">
                   <span className="font-medium text-gray-800 mr-2">•</span>
