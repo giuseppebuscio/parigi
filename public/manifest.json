@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Parigi",
+  "name": "Parigi - Scopri le meraviglie della città",
+  "description": "App per visitare le attrazioni più belle di Parigi",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "theme_color": "#f8f9fa",
+  "background_color": "#f8f9fa",
+  "categories": ["travel", "lifestyle", "utilities"],
+  "lang": "it"
 }

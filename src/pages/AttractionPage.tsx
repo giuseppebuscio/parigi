@@ -62,10 +62,7 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
       description: 'Cattedrale gotica simbolo di Parigi',
       image: '/images/notre-dame.avif',
       tickets: [
-        { name: 'Saverio Buscio', price: '', pdf: '/biglietti/notre-dame/saverio-buscio.pdf' },
-        { name: 'Caterina Alaimo', price: '', pdf: '/biglietti/notre-dame/caterina-alaimo.pdf' },
-        { name: 'Cristina Fiorenza', price: '', pdf: '/biglietti/notre-dame/cristina-fiorenza.pdf' },
-        { name: 'Giuseppe Scopelliti', price: '', pdf: '/biglietti/notre-dame/giuseppe-scopelliti.pdf' }
+        { name: 'Prenotazione', price: '', pdf: 'https://resa.notredamedeparis.fr/fr/reservationindividuelle/tickets' }
       ],
       receipts: [
         { name: 'Ricevuta Acquisto', pdf: '/ricevute/notre-dame/ricevuta-acquisto.pdf' }
@@ -75,12 +72,7 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
     'battello-senna': {
       description: 'Crociera panoramica sulla Senna',
       image: '/images/battello-senna.jpg',
-      tickets: [
-        { name: 'Saverio Buscio', price: '', pdf: '/biglietti/battello-senna/saverio-buscio.pdf' },
-        { name: 'Caterina Alaimo', price: '', pdf: '/biglietti/battello-senna/caterina-alaimo.pdf' },
-        { name: 'Cristina Fiorenza', price: '', pdf: '/biglietti/battello-senna/cristina-fiorenza.pdf' },
-        { name: 'Giuseppe Scopelliti', price: '', pdf: '/biglietti/battello-senna/giuseppe-scopelliti.pdf' }
-      ],
+      tickets: [],
       receipts: [
         { name: 'Ricevuta Acquisto', pdf: '/ricevute/battello-senna/ricevuta-acquisto.pdf' }
       ],
@@ -104,10 +96,7 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
       description: 'Teatro dell\'opera storico di Parigi',
       image: '/images/opera-paris.jpg',
       tickets: [
-        { name: 'Saverio Buscio', price: '', pdf: '/biglietti/opera-paris/saverio-buscio.pdf' },
-        { name: 'Caterina Alaimo', price: '', pdf: '/biglietti/opera-paris/caterina-alaimo.pdf' },
-        { name: 'Cristina Fiorenza', price: '', pdf: '/biglietti/opera-paris/cristina-fiorenza.pdf' },
-        { name: 'Giuseppe Scopelliti', price: '', pdf: '/biglietti/opera-paris/giuseppe-scopelliti.pdf' }
+        { name: 'Prenotazione', price: '', pdf: 'https://visites.operadeparis.fr/selection/timeslotpass?productId=10229080237508&_gl=1*1c3a3nq*_gcl_aw*R0NMLjE3NTc3NjgyODguQ2owS0NRandySlRHQmhDYkFSSXNBTkZCZmdzT19CV3AtQzZjMmpETTJuUkdRUHVOeE5sVlZmTG5jcXd1UGZXcDBEWVpPbmlCb1F5VmlwZ2FBcmtoRUFMd193Y0I.*_gcl_au*MTAzNTAyMzcxOC4xNzU1OTczMDQ5LjQ0MTkwMjMyOC4xNzU3NzY2NjAwLjE3NTc3NjY2ODc.*FPAU*MTAzNTAyMzcxOC4xNzU1OTczMDQ5' }
       ],
       receipts: [
         { name: 'Ricevuta Acquisto', pdf: '/ricevute/opera-paris/ricevuta-acquisto.pdf' }
@@ -167,7 +156,7 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
         </div>
 
         {/* Biglietti Section */}
-        {data.tickets.length > 0 && (
+        {(data.tickets.length > 0 || attraction.id === 'battello-senna') && (
           <div className="mb-8">
             <h2 className="text-xl font-medium text-gray-900 mb-4 text-center">
               Biglietti
@@ -209,6 +198,22 @@ const AttractionPage: React.FC<AttractionPageProps> = ({ attraction }) => {
                 </a>
               ))}
             </div>
+            {/* Nota speciale per Notre Dame */}
+            {attraction.id === 'notre-dame' && (
+              <div className="mt-3 text-center">
+                <p className="text-xs text-gray-500">
+                  Le prenotazioni apriranno il 1° ottobre
+                </p>
+              </div>
+            )}
+            {/* Nota speciale per Battello Senna */}
+            {attraction.id === 'battello-senna' && (
+              <div className="mt-3 text-center">
+                <p className="text-xs text-gray-500">
+                  I biglietti saranno disponibili dal 15 ottobre
+                </p>
+              </div>
+            )}
           </div>
         )}
 
